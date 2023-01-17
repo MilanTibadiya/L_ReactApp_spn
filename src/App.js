@@ -33,17 +33,6 @@ const DUMMY_EXPENSE = [
 const App = () => {
   
   const [expenses, setExpenses] = useState(DUMMY_EXPENSE);
-  //just - Task for use of loopp
-  // let a =[]
-  // for(var i=0; i<10; i++){
-  //   a.push(<div className="expense-item">
-  //   <div>2023-02-11</div>
-  //   <div className="expense-item__description">
-  //       <h2>Car Insurance</h2> 
-  //       <div className="expense-item__price">$120</div>
-  //   </div>
-  // </div>);
-  // }
 
   const addExpenseHandler = (expense) => {
     const updatedExpense = [expense, ...expenses];
@@ -52,7 +41,6 @@ const App = () => {
   
   return (
     <div>
-      {/* {a} */}
       <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses item={expenses}/>
     </div>
